@@ -1,0 +1,33 @@
+<!-- <p>Click any respective book name from the list below to</p>
+    <ul>
+        <li>To read further details about that book</li>
+        <li>To delete that book</li>
+        <li>To update that book</li>
+    </ul> -->
+   
+
+
+
+<!-- <li *ngFor= "let arr of foods">{{ foods }}</li> -->
+
+<!-- <li *ngFor= "let arr of foods">{{ arr.name}}</li> -->
+
+
+<!-- <li *ngFor = "let myvar of foods">{{ myvar.name}} {{ myvar.type}} </li> -->
+    
+<p><b>click any book name to see further details, and to update and/or delete that book from the details page</b>
+<br><b>A book can also be directly deleted from this page by clicking the delete button corresponding to each book name</b>    
+</p>
+
+<!-- Using for loop for iteration -->
+<div *ngFor="let book of books" style="background: cyan; color:turquoise; font-weight: bold; font-size: large; padding: 10px">
+    <a routerLink="/book/{{book._id}}">{{book.name}}</a>
+    <!-- <a href="{{book._id}}">Delete this book</a> -->
+    <form (ngSubmit) = "deleteBook(book)">
+        <button type="submit"> Delete this book </button>
+    </form>
+</div>
+    
+
+    
+    

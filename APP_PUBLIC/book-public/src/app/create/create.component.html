@@ -1,0 +1,29 @@
+<div style="background: cyan; color: black; font-weight: bold; font-size: large; padding: 10px">
+<p>Kindly complete the below form to create a new book</p>
+
+<form (ngSubmit) = "createNewBook(newBook)">
+    <div class="form-group">
+    <label for="name">Name of Book</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input [(ngModel)] = "newBook.name" id="name" name="name" required="required">
+    </div>
+
+    <div class="form-group">
+    <label for="type">Type of Book</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input [(ngModel)] = "newBook.type" id="type" name="type" required="required">
+    </div>
+
+    <div class="form-group">
+    <label for="author">Author of Book</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input [(ngModel)] = "newBook.author" id="author" name="author" required="required">
+    </div>
+
+    <div class="form-group">
+    <label for="isbn_code">ISBN code of Book</label>
+    <input [(ngModel)] = "newBook.isbn_code" id="isbn_code" name="isbn_code" required="required">
+    </div>
+
+    <button type="submit"> Create Book</button>
+    
+
+</form>
+</div>

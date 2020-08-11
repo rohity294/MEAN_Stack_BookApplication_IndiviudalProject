@@ -1,0 +1,32 @@
+<p>You are viewing details of a specific book</p>
+<app-header [content]="pageContent.header"></app-header>
+<p><b>Book ID :</b> {{newBook._id}}</p>
+<p><b>Book Name :</b> {{newBook.name}}</p>
+<p><b>Book Type :</b> {{newBook.type}}</p>
+<p><b>Book Author :</b> {{newBook.author}}</p>
+<p><b>Book ISBN Code :</b> {{newBook.isbn_code}}</p>
+
+<form (ngSubmit) = "deleteBook(newBook)">
+
+    <label for="_id"><p style="color:darkmagenta">Confirm the Above Book Id and hit 'Delete' button</p></label>
+    <input [(ngModel)] = "newBook._id" id="_id" name="_id" required="required">
+    <button type="submit"> Delete this book </button>
+    
+</form>
+
+<p style="color:darkmagenta">Enter the relevant fields to update and hit 'Update' button</p>
+<form (ngSubmit) = "updateBook(newBook)">
+    <label for="name">Book Name</label>
+    <input [(ngModel)] = "newBook.name" id="name" name="name" required="required">
+    <label for="type">Book Type</label>
+    <input [(ngModel)] = "newBook.type" id="type" name="type" required="required">
+    <label for="author">Book Author</label>
+    <input [(ngModel)] = "newBook.author" id="author" name="author" required="required">
+    <label for="isbnCode">Book ISBN Code</label>
+    <input [(ngModel)] = "newBook.isbn_code" id="isbn_code" name="isbn_code" required="required">
+    <button type="submit"> Update this book </button>
+    
+</form>
+
+
+
